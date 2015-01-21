@@ -1,0 +1,39 @@
+{
+  "name": "d-pac.plugin-parser",
+  "version": "1.0.0",
+  "description": "Plugin parser module for d-pac platform",
+  "homepage": "http://www.d-pac.be",
+  "author": {
+    "name": "d-pac",
+    "email": "info@d-pac.be",
+    "url": "http://www.d-pac.be"
+  },
+  "repository": "https://github.com/d-pac/d-pac.plugin-parser",
+  "license": "GPL v3",
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "d-pac"
+  ],
+  "dependencies": {
+    "meow": "^2.0.0"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^1.0.0",
+    "time-grunt": "^1.0.0",
+    "grunt-mocha-cli": "^1.11.0",
+    "jshint-stylish": "^1.0.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "bin": {
+    "d-pac-parser": "cli.js"
+  }
+}
