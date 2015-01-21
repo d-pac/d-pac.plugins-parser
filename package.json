@@ -18,6 +18,10 @@
     "d-pac"
   ],
   "dependencies": {
+    "chalk": "^0.5.1",
+    "debug": "^2.1.1",
+    "findup-sync": "^0.2.1",
+    "lodash": "^2.4.1",
     "meow": "^2.0.0"
   },
   "devDependencies": {
@@ -33,6 +37,6 @@
     "test": "grunt"
   },
   "bin": {
-    "d-pac-parser": "cli.js"
+    "d-pac-plugins": "cli.js"
   }
 }
