@@ -68,7 +68,7 @@ parser({
 
 ## License
 
-MIT © [d-pac](http://www.d-pac.be)
+GPL v3 © [d-pac](http://www.d-pac.be)
 
 
 [npm-url]: https://npmjs.org/package/d-pac.plugins-parser
