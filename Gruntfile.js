@@ -4,14 +4,12 @@ module.exports = function( grunt ){
   require( "time-grunt" )( grunt );
   // Load all grunt tasks
   require( "jit-grunt" )( grunt, {
-    mochacli : "grunt-mocha-cli"
   } );
 
   var paths = {
     source : [ "index.js", "cli.js", "lib/**/*.js" ],
     tests  : [ "test/**/*.js" ]
   };
-
 
   grunt.initConfig( {
     jshint : {
@@ -40,20 +38,11 @@ module.exports = function( grunt ){
       test    : {
         src : paths.tests
       }
-    },
-
-
-    mochacli : {
-      options : {
-        reporter : "spec",
-        bail     : true
-      },
-      all     : [ "test/*.js" ]
     }
+
   } );
 
   grunt.registerTask( "lint", [ "jshint", "jscs" ] );
-  grunt.registerTask( "test", [ "mochacli" ] );
 
-  grunt.registerTask( "default", [ "lint", "test" ] );
+  grunt.registerTask( "default", [ "lint" ] );
 };

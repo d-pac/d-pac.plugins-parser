@@ -1,5 +1,5 @@
 {
-  "name": "d-pac.plugin-parser",
+  "name": "d-pac.plugins-parser",
   "version": "1.0.0",
   "description": "Plugin parser module for d-pac platform",
   "homepage": "http://www.d-pac.be",
@@ -8,7 +8,7 @@
     "email": "info@d-pac.be",
     "url": "http://www.d-pac.be"
   },
-  "repository": "https://github.com/d-pac/d-pac.plugin-parser",
+  "repository": "https://github.com/d-pac/d-pac.plugins-parser",
   "license": "GPL v3",
   "files": [
     "index.js",
@@ -28,7 +28,6 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-jscs": "^1.2.0",
-    "grunt-mocha-cli": "^1.11.0",
     "jit-grunt": "^0.9.0",
     "jshint-stylish": "^1.0.0",
     "time-grunt": "^1.0.0"
