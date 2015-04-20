@@ -3,7 +3,7 @@
 /* jshint unused:false */
 var _ = require( "lodash" );
 var expect = require( "must" );
-var assert = require( "assert" )
+var assert = require( "assert" );
 var subject = require( "../lib/verifyPluginConfig" );
 var fx = require( './fixtures' );
 
