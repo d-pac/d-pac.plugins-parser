@@ -1,0 +1,6 @@
+{
+  "name": "valid configuration",
+  "description": "all fields have a valid value",
+  "type": "select",
+  "compatibleWith": "^0.6.0"
+}
