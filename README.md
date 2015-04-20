@@ -49,7 +49,7 @@ parser();
 ```
 
 Will search in the `process.cwd()` or nearest ancestor directory for a `package.json`. Once found it will parse its `dependencies` and check them one by one for a `d-pac` entry (in their respective `package.json`) and output any plugin configurations it finds.
-See [d-pac.plugin specifications for more information](https://github.com/d-pac/d-pac.docs/blob/master/analysis/plugin%20specification.md)
+See [d-pac.plugin specifications for more information](http://d-pac.github.io/d-pac.docs/developer/plugin%20specification.html)
 
 
 ### Example
