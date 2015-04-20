@@ -10,8 +10,9 @@
   },
   "repository": "https://github.com/d-pac/d-pac.plugins-parser",
   "license": "GPL v3",
+  "main": "lib/pluginsParser.js",
   "files": [
-    "index.js",
+    "lib",
     "cli.js"
   ],
   "keywords": [

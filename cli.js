@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 var meow = require( "meow" );
-var parser = require( "./" );
+var parser = require( "./lib/pluginsParser" );
 
 var cli = meow( {
   help : [
