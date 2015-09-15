@@ -35,7 +35,7 @@ describe( "-- verifyPluginConfig --", function(){
       } );
       describe( "having an incompatible version", function(){
         it( "should return false", function(){
-          config.compatibleWith = "^0.5.0";
+          config.compatibility = "^0.5.0";
           var actual = subject( config, VERSION );
           expect( actual ).to.be.false();
         } );
@@ -52,7 +52,7 @@ describe( "-- verifyPluginConfig --", function(){
       } );
       describe( "having an non-semver version specification in `compatibleWith`", function(){
         it( "should throw an AssertionError", function(){
-          config.compatibleWith = "not a valid semver range";
+          config.compatibility = "not a valid semver range";
           expect( function(){
             subject( config );
           } ).to.throw( assert.AssertionError, /semver compatible/i );
