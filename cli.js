@@ -2,10 +2,9 @@
 "use strict";
 var meow = require( "meow" );
 var _ = require( "lodash" );
-var parser = require( "./lib/pluginsParser" );
 
 var cli = meow( {
-  help : [
+  help: [
     "Usage",
     "  d-pac-plugins [<directory>] [--manifest=<file>] [--framework=<semver>] [--verbose] [--version]",
     "",
@@ -17,17 +16,20 @@ var cli = meow( {
     "  $ d-pac-plugins --manifest=dependencies.json"
   ].join( "\n" )
 }, {
-  alias : {
-    "v" : "verbose",
-    "m" : "manifest",
-    "f" : "framework",
-    "d" : "dir"
+  alias: {
+    "v": "verbose",
+    "m": "manifest",
+    "f": "framework",
+    "d": "dir"
   }
 } );
-
 var opts = _.defaults( {
-  cli : true,
-  dir : cli.input[ 0 ]
+  cli: true,
+  dir: cli.input[ 0 ]
 }, cli.flags );
-
-parser(opts);
+process.env.DEBUG = "d-pac.plugins-parser:*";
+process.env.DEBUG_LEVEL = (opts.verbose)
+  ? "debug"
+  : "info";
+var parser = require( "./lib/pluginsParser" );
+parser( opts );

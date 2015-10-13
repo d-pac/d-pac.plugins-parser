@@ -13,14 +13,15 @@
   "main": "lib/pluginsParser.js",
   "files": [
     "lib",
-    "cli.js"
+    "cli.js",
+    "index.js"
   ],
   "keywords": [
     "d-pac"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
-    "debug": "^2.1.1",
+    "chalk": "^1.1.1",
+    "debug-logger": "^0.4.1",
     "findup-sync": "^0.3.0",
     "lodash": "^3.7.0",
     "meow": "^3.1.0",
@@ -36,8 +37,7 @@
     "sinon": "^1.14.1"
   },
   "scripts": {
-    "test": "mocha tests/*.test.js",
-    "lint": "jshint lib tests; jscs lib tests"
+    "test": "mocha tests/*.test.js"
   },
   "bin": {
     "d-pac-plugins": "cli.js"
