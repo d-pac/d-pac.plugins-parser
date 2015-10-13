@@ -55,7 +55,7 @@ describe( "-- verifyPluginConfig --", function(){
           config.compatibility = "not a valid semver range";
           expect( function(){
             subject( config );
-          } ).to.throw( assert.AssertionError, /semver compatible/i );
+          } ).to.throw( assert.AssertionError, /valid semver/i );
         } );
       } );
     } );
