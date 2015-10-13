@@ -7,7 +7,7 @@ var assert = require( "assert" );
 var subject = require( "../lib/verifyPluginConfig" );
 var fx = require( './fixtures' );
 
-var VERSION = "0.6.9";
+var VERSION = "0.1.6";
 
 describe( "-- verifyPluginConfig --", function(){
   describe( "test", function(){
@@ -29,14 +29,14 @@ describe( "-- verifyPluginConfig --", function(){
     describe( "with a valid configuration", function(){
       describe( "having a compatible version", function(){
         it( "should return true", function(){
-          var actual = subject( config, VERSION );
+          var actual = subject( config, { "d-pac": { plugins: VERSION } } );
           expect( actual ).to.be.true();
         } );
       } );
       describe( "having an incompatible version", function(){
         it( "should return false", function(){
           config.satisfies = "^0.5.0";
-          var actual = subject( config, VERSION );
+          var actual = subject( config, { "d-pac": { plugins: VERSION } } );
           expect( actual ).to.be.false();
         } );
       } );
@@ -50,7 +50,7 @@ describe( "-- verifyPluginConfig --", function(){
           } ).to.throw( assert.AssertionError, /required/i );
         } );
       } );
-      describe( "having an non-semver version specification in `compatibleWith`", function(){
+      describe( "having an non-semver version specification in `satisfies`", function(){
         it( "should throw an AssertionError", function(){
           config.satisfies = "not a valid semver range";
           expect( function(){

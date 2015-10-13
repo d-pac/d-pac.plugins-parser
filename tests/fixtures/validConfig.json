@@ -2,5 +2,5 @@
   "name": "valid configuration",
   "description": "all fields have a valid value",
   "type": "select",
-  "satisfies": "^0.6.0"
+  "satisfies": "^0.1.0"
 }
